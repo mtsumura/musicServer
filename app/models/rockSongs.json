@@ -1,0 +1,446 @@
+[
+	{ "id": 0, "artist": "Arcade Fire", "songTitle": "The Suburbs", "url": "01 The Suburbs.mp3" },
+	{
+		"id": 1,
+		"artist": "Arcade Fire",
+		"songTitle": "Ready To Start",
+		"url": "02 Ready To Start.mp3"
+	},
+	{ "id": 2, "artist": "Arcade Fire", "songTitle": "Modern Man", "url": "03 Modern Man.mp3" },
+	{ "id": 3, "artist": "Arcade Fire", "songTitle": "Rococo", "url": "04 Rococo.mp3" },
+	{ "id": 4, "artist": "Arcade Fire", "songTitle": "Empty Room", "url": "05 Empty Room.mp3" },
+	{
+		"id": 5,
+		"artist": "Arcade Fire",
+		"songTitle": "City With No Children",
+		"url": "06 City With No Children.mp3"
+	},
+	{ "id": 6, "artist": "Arcade Fire", "songTitle": "Half Light I", "url": "07 Half Light I.mp3" },
+	{
+		"id": 7,
+		"artist": "Arcade Fire",
+		"songTitle": "Half Light II (No Celebration)",
+		"url": "08 Half Light II (No Celebration).mp3"
+	},
+	{ "id": 8, "artist": "Arcade Fire", "songTitle": "Suburban War", "url": "09 Suburban War.mp3" },
+	{ "id": 9, "artist": "Arcade Fire", "songTitle": "Month Of May", "url": "10 Month Of May.mp3" },
+	{
+		"id": 10,
+		"artist": "Arcade Fire",
+		"songTitle": "Wasted Hours",
+		"url": "11 Wasted Hours.mp3"
+	},
+	{ "id": 11, "artist": "Arcade Fire", "songTitle": "Deep Blue", "url": "12 Deep Blue.mp3" },
+	{
+		"id": 12,
+		"artist": "Arcade Fire",
+		"songTitle": "We Used To Wait",
+		"url": "13 We Used To Wait.mp3"
+	},
+	{
+		"id": 13,
+		"artist": "Arcade Fire",
+		"songTitle": "Sprawl (Flatland)",
+		"url": "14 Sprawl (Flatland).mp3"
+	},
+	{
+		"id": 14,
+		"artist": "Arcade Fire",
+		"songTitle": "Sprawl II (Mountains Beyond Mountains)",
+		"url": "15 Sprawl II (Mountains Beyond Mountains).mp3"
+	},
+	{
+		"id": 15,
+		"artist": "Arcade Fire",
+		"songTitle": "The Suburbs (continued)",
+		"url": "16 The Suburbs (continued).mp3"
+	},
+	{
+		"id": 16,
+		"artist": "Bon Jovi",
+		"songTitle": "Livin' On A Prayer",
+		"url": "01 Livin' On A Prayer.mp3"
+	},
+	{
+		"id": 17,
+		"artist": "Bon Jovi",
+		"songTitle": "Keep The Faith",
+		"url": "02 Keep The Faith.mp3"
+	},
+	{
+		"id": 18,
+		"artist": "Bon Jovi",
+		"songTitle": "Someday I'll Be Saturday Night",
+		"url": "03 Someday I'll Be Saturday Night.mp3"
+	},
+	{
+		"id": 19,
+		"artist": "Bon Jovi",
+		"songTitle": "Wanted Dead Or Alive",
+		"url": "05 Wanted Dead Or Alive.mp3"
+	},
+	{
+		"id": 20,
+		"artist": "Bon Jovi",
+		"songTitle": "Lay Your Hands On Me",
+		"url": "06 Lay Your Hands On Me.mp3"
+	},
+	{
+		"id": 21,
+		"artist": "Bon Jovi",
+		"songTitle": "I'll Be There For You",
+		"url": "12 I'll Be There For You.mp3"
+	},
+	{
+		"id": 22,
+		"artist": "Bon Jovi",
+		"songTitle": "In & Out Of Love",
+		"url": "13 In & Out Of Love.mp3"
+	},
+	{ "id": 23, "artist": "Bon Jovi", "songTitle": "Runaway", "url": "14 Runaway.mp3" },
+	{ "id": 24, "artist": "Bon Jovi", "songTitle": "Bad_Medicine", "url": "Bad_Medicine.mp3" },
+	{
+		"id": 25,
+		"artist": "Bon Jovi",
+		"songTitle": "You Give Love A Bad Name",
+		"url": "You Give Love A Bad Name.mp3"
+	},
+	{
+		"id": 26,
+		"artist": "BruceSpringsteen",
+		"songTitle": "Born To Run",
+		"url": "01 Born To Run.mp3"
+	},
+	{
+		"id": 27,
+		"artist": "BruceSpringsteen",
+		"songTitle": "Thunder Road",
+		"url": "02 Thunder Road.mp3"
+	},
+	{ "id": 28, "artist": "BruceSpringsteen", "songTitle": "Badlands", "url": "03 Badlands.mp3" },
+	{ "id": 29, "artist": "BruceSpringsteen", "songTitle": "The River", "url": "04 The River.mp3" },
+	{
+		"id": 30,
+		"artist": "BruceSpringsteen",
+		"songTitle": "Hungry Heart",
+		"url": "05 Hungry Heart.mp3"
+	},
+	{
+		"id": 31,
+		"artist": "BruceSpringsteen",
+		"songTitle": "Atlantic City",
+		"url": "06 Atlantic City.mp3"
+	},
+	{
+		"id": 32,
+		"artist": "BruceSpringsteen",
+		"songTitle": "Dancing In The Dark",
+		"url": "07 Dancing In The Dark.mp3"
+	},
+	{
+		"id": 33,
+		"artist": "BruceSpringsteen",
+		"songTitle": "Born In The U.S.A.",
+		"url": "08 Born In The U.S.A..mp3"
+	},
+	{
+		"id": 34,
+		"artist": "BruceSpringsteen",
+		"songTitle": "My Hometown",
+		"url": "09 My Hometown.mp3"
+	},
+	{
+		"id": 35,
+		"artist": "BruceSpringsteen",
+		"songTitle": "Glory Days",
+		"url": "10 Glory Days.mp3"
+	},
+	{
+		"id": 36,
+		"artist": "BruceSpringsteen",
+		"songTitle": "Brilliant Disguise",
+		"url": "11 Brilliant Disguise.mp3"
+	},
+	{
+		"id": 37,
+		"artist": "BruceSpringsteen",
+		"songTitle": "Human Touch",
+		"url": "12 Human Touch.mp3"
+	},
+	{
+		"id": 38,
+		"artist": "BruceSpringsteen",
+		"songTitle": "Better Days",
+		"url": "13 Better Days.mp3"
+	},
+	{
+		"id": 39,
+		"artist": "BruceSpringsteen",
+		"songTitle": "Streets Of Philadelphia",
+		"url": "14 Streets Of Philadelphia.mp3"
+	},
+	{
+		"id": 40,
+		"artist": "BruceSpringsteen",
+		"songTitle": "Secret Garden",
+		"url": "15 Secret Garden.mp3"
+	},
+	{
+		"id": 41,
+		"artist": "BruceSpringsteen",
+		"songTitle": "Murder Incorporated",
+		"url": "16 Murder Incorporated.mp3"
+	},
+	{
+		"id": 42,
+		"artist": "BruceSpringsteen",
+		"songTitle": "Blood Brothers",
+		"url": "17 Blood Brothers.mp3"
+	},
+	{
+		"id": 43,
+		"artist": "BruceSpringsteen",
+		"songTitle": "This Hard Land",
+		"url": "18 This Hard Land.mp3"
+	},
+	{
+		"id": 44,
+		"artist": "Guns N' Roses",
+		"songTitle": "Welcome To The Jungle",
+		"url": "01 Welcome To The Jungle.mp3"
+	},
+	{
+		"id": 45,
+		"artist": "Guns N' Roses",
+		"songTitle": "Sweet Child O' Mine",
+		"url": "02 Sweet Child O' Mine.mp3"
+	},
+	{ "id": 46, "artist": "Guns N' Roses", "songTitle": "Patience", "url": "03 Patience.mp3" },
+	{
+		"id": 47,
+		"artist": "Guns N' Roses",
+		"songTitle": "Paradise City",
+		"url": "04 Paradise City.mp3"
+	},
+	{
+		"id": 48,
+		"artist": "Guns N' Roses",
+		"songTitle": "Knockin' On Heaven's Door",
+		"url": "05 Knockin' On Heaven's Door.mp3"
+	},
+	{ "id": 49, "artist": "Guns N' Roses", "songTitle": "Civil War", "url": "06 Civil War.mp3" },
+	{
+		"id": 50,
+		"artist": "Guns N' Roses",
+		"songTitle": "You Could Be Mine",
+		"url": "07 You Could Be Mine.mp3"
+	},
+	{
+		"id": 51,
+		"artist": "Guns N' Roses",
+		"songTitle": "Don't Cry (Original)",
+		"url": "08 Don't Cry (Original).mp3"
+	},
+	{
+		"id": 52,
+		"artist": "Guns N' Roses",
+		"songTitle": "November Rain",
+		"url": "09 November Rain.mp3"
+	},
+	{
+		"id": 53,
+		"artist": "Guns N' Roses",
+		"songTitle": "Live And Let Die",
+		"url": "10 Live And Let Die.mp3"
+	},
+	{ "id": 54, "artist": "Guns N' Roses", "songTitle": "Yesterdays", "url": "11 Yesterdays.mp3" },
+	{
+		"id": 55,
+		"artist": "Guns N' Roses",
+		"songTitle": "Ain't It Fun",
+		"url": "12 Ain't It Fun.mp3"
+	},
+	{
+		"id": 56,
+		"artist": "Guns N' Roses",
+		"songTitle": "Since I Don't Have You",
+		"url": "13 Since I Don't Have You.mp3"
+	},
+	{
+		"id": 57,
+		"artist": "Guns N' Roses",
+		"songTitle": "Sympathy For The Devil",
+		"url": "14 Sympathy For The Devil.mp3"
+	},
+	{ "id": 58, "artist": "Kings of Leon", "songTitle": "Closer", "url": "1-01 Closer.mp3" },
+	{ "id": 59, "artist": "Kings of Leon", "songTitle": "Crawl", "url": "1-02 Crawl.mp3" },
+	{
+		"id": 60,
+		"artist": "Kings of Leon",
+		"songTitle": "Sex On Fire",
+		"url": "1-03 Sex On Fire.mp3"
+	},
+	{
+		"id": 61,
+		"artist": "Kings of Leon",
+		"songTitle": "Use Somebody",
+		"url": "1-04 Use Somebody.mp3"
+	},
+	{ "id": 62, "artist": "Kings of Leon", "songTitle": "Manhattan", "url": "1-05 Manhattan.mp3" },
+	{ "id": 63, "artist": "Kings of Leon", "songTitle": "Revelry", "url": "1-06 Revelry.mp3" },
+	{ "id": 64, "artist": "Kings of Leon", "songTitle": "_", "url": "1-07_17.mp3" },
+	{ "id": 65, "artist": "Kings of Leon", "songTitle": "Notion", "url": "1-08 Notion.mp3" },
+	{
+		"id": 66,
+		"artist": "Kings of Leon",
+		"songTitle": "I Want You",
+		"url": "1-09 I Want You.mp3"
+	},
+	{
+		"id": 67,
+		"artist": "Kings of Leon",
+		"songTitle": "Be Somebody",
+		"url": "1-10 Be Somebody.mp3"
+	},
+	{
+		"id": 68,
+		"artist": "Kings of Leon",
+		"songTitle": "Cold Desert",
+		"url": "1-11 Cold Desert.mp3"
+	},
+	{
+		"id": 69,
+		"artist": "LCD Soundsystem",
+		"songTitle": "Dance Yrself Clean",
+		"url": "01 Dance Yrself Clean.mp3"
+	},
+	{
+		"id": 70,
+		"artist": "LCD Soundsystem",
+		"songTitle": "Drunk Girls",
+		"url": "02 Drunk Girls.mp3"
+	},
+	{ "id": 71, "artist": "LCD Soundsystem", "songTitle": "One Touch", "url": "03 One Touch.mp3" },
+	{
+		"id": 72,
+		"artist": "LCD Soundsystem",
+		"songTitle": "All I Want",
+		"url": "04 All I Want.mp3"
+	},
+	{
+		"id": 73,
+		"artist": "LCD Soundsystem",
+		"songTitle": "I Can Change",
+		"url": "05 I Can Change.mp3"
+	},
+	{
+		"id": 74,
+		"artist": "LCD Soundsystem",
+		"songTitle": "You Wanted A Hit",
+		"url": "06 You Wanted A Hit.mp3"
+	},
+	{ "id": 75, "artist": "LCD Soundsystem", "songTitle": "Pow Pow", "url": "07 Pow Pow.mp3" },
+	{
+		"id": 76,
+		"artist": "LCD Soundsystem",
+		"songTitle": "Somebody's Calling Me",
+		"url": "08 Somebody's Calling Me.mp3"
+	},
+	{ "id": 77, "artist": "LCD Soundsystem", "songTitle": "Home", "url": "09 Home.mp3" },
+	{
+		"id": 78,
+		"artist": "Red Hot Chilli Peppers",
+		"songTitle": "Under The Bridge",
+		"url": "01 Under The Bridge.m4a"
+	},
+	{
+		"id": 79,
+		"artist": "Red Hot Chilli Peppers",
+		"songTitle": "Give It Away",
+		"url": "02 Give It Away.m4a"
+	},
+	{
+		"id": 80,
+		"artist": "Red Hot Chilli Peppers",
+		"songTitle": "Californication",
+		"url": "03 Californication.m4a"
+	},
+	{
+		"id": 81,
+		"artist": "Red Hot Chilli Peppers",
+		"songTitle": "Scar Tissue",
+		"url": "04 Scar Tissue.m4a"
+	},
+	{
+		"id": 82,
+		"artist": "Red Hot Chilli Peppers",
+		"songTitle": "Soul To Squeeze",
+		"url": "05 Soul To Squeeze.m4a"
+	},
+	{
+		"id": 83,
+		"artist": "Red Hot Chilli Peppers",
+		"songTitle": "Otherside",
+		"url": "06 Otherside.m4a"
+	},
+	{
+		"id": 84,
+		"artist": "Red Hot Chilli Peppers",
+		"songTitle": "Suck My Kiss",
+		"url": "07 Suck My Kiss.m4a"
+	},
+	{
+		"id": 85,
+		"artist": "Red Hot Chilli Peppers",
+		"songTitle": "By The Way",
+		"url": "08 By The Way.m4a"
+	},
+	{
+		"id": 86,
+		"artist": "Red Hot Chilli Peppers",
+		"songTitle": "Parallel Universe",
+		"url": "09 Parallel Universe.m4a"
+	},
+	{
+		"id": 87,
+		"artist": "Red Hot Chilli Peppers",
+		"songTitle": "Breaking The Girl",
+		"url": "10 Breaking The Girl.m4a"
+	},
+	{
+		"id": 88,
+		"artist": "Red Hot Chilli Peppers",
+		"songTitle": "My Friends",
+		"url": "11 My Friends.m4a"
+	},
+	{
+		"id": 89,
+		"artist": "Red Hot Chilli Peppers",
+		"songTitle": "Higher Ground",
+		"url": "12 Higher Ground.m4a"
+	},
+	{
+		"id": 90,
+		"artist": "Red Hot Chilli Peppers",
+		"songTitle": "Universally Speaking",
+		"url": "13 Universally Speaking.m4a"
+	},
+	{
+		"id": 91,
+		"artist": "Red Hot Chilli Peppers",
+		"songTitle": "Road Trippin'",
+		"url": "14 Road Trippin'.m4a"
+	},
+	{
+		"id": 92,
+		"artist": "Red Hot Chilli Peppers",
+		"songTitle": "Fortune Faded",
+		"url": "15 Fortune Faded.m4a"
+	},
+	{
+		"id": 93,
+		"artist": "Red Hot Chilli Peppers",
+		"songTitle": "Save The Population",
+		"url": "16 Save The Population.m4a"
+	}
+]
