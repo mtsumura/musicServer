@@ -27,6 +27,15 @@ libraryDependencies ++= Seq(
   "com.amazonaws" % "aws-java-sdk" % "1.11.815"
 )
 
+//kafka producer
+libraryDependencies ++= Seq(
+  "org.apache.kafka" % "kafka-clients" % "2.6.0"
+)
+
+//kafka streams
+libraryDependencies ++= Seq(
+  "org.apache.kafka" % "kafka-streams" % "2.6.0",
+)
 
 
 // Adds additional packages into Twirl
