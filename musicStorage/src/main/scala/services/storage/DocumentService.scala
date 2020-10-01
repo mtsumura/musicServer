@@ -1,13 +1,16 @@
-package services
+package services.storage
 
-import com.amazonaws.services.s3.AmazonS3Client
-import com.amazonaws.services.s3.model.Region
 import org.slf4j.LoggerFactory
-import com.amazonaws.services.s3.model.GetObjectRequest
-import com.amazonaws.util.IOUtils
-import com.amazonaws.services.s3.AmazonS3
-import com.amazonaws.SdkClientException
+
 import com.amazonaws.AmazonServiceException
+import com.amazonaws.SdkClientException
+import com.amazonaws.services.s3.AmazonS3
+import com.amazonaws.services.s3.AmazonS3Client
+import com.amazonaws.services.s3.model.GetObjectRequest
+import com.amazonaws.services.s3.model.Region
+import com.amazonaws.util.IOUtils
+
+import services.document.DocumentServiceRetrieval
 
 class DocumentService extends DocumentServiceRetrieval {
   final val log = LoggerFactory.getLogger(this.getClass());

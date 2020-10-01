@@ -13,8 +13,8 @@ import play.api.mvc.AnyContent
 import play.api.mvc.ControllerComponents
 import play.api.mvc.Action
 import play.api.mvc.Request
-import services.SongListService
-import services.SongService
+import services.songs.SongListService
+import services.songs.SongService
 
 /**
  * This controller creates an `Action` to handle HTTP requests to the

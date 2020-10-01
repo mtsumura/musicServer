@@ -1,9 +1,10 @@
-package services
+package services.songs
 
 import java.sql.ResultSet
 import play.api.db.Database
 import javax.inject.Inject
 import models.SongList
+import services.query.QueryHelper
 
 class SongListService @Inject() (db: Database) extends QueryHelper {
 

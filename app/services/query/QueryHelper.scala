@@ -1,4 +1,4 @@
-package services
+package services.query
 
 import scala.reflect.ClassTag
 import java.sql.ResultSet

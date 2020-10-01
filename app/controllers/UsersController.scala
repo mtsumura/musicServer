@@ -3,7 +3,7 @@ package controllers
 import javax.inject.Inject
 import javax.inject.Singleton
 import play.api.mvc.BaseController
-import services.UserService
+import services.users.UserService
 import play.api.db.Database
 import org.slf4j.LoggerFactory
 import play.api.mvc.Request

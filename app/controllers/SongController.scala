@@ -13,15 +13,15 @@ import play.api.mvc.ControllerComponents
 import play.api.mvc.RangeResult
 import play.api.mvc.Request
 import play.api.mvc.Result
-import services.DocumentService
-import services.SongService
+import services.songs.SongService
+import services.document.DocumentServiceRetrieval
 
 /**
  * This controller creates an `Action` to handle HTTP requests to the
  * application's home page.
  */
 @Singleton
-class SongController @Inject() (cache: SyncCacheApi, controllerComponents: ControllerComponents)(db: Database)
+class SongController @Inject() (cache: SyncCacheApi, controllerComponents: ControllerComponents, ds: DocumentServiceRetrieval)(db: Database)
   extends CacheHelper(cache, controllerComponents) {
 
   private val SONG_BINARY_KEY = "SONG_BINARY_"
@@ -41,7 +41,6 @@ class SongController @Inject() (cache: SyncCacheApi, controllerComponents: Contr
         }
 
         log.info(songId + " Cache Miss, cache Song: " + documentKey)
-        val ds = new DocumentService()
         val byteArray = ds.getObject(documentKey)
 
         //val byteArray = Files.readAllBytes(Paths.get(filePath))
@@ -70,7 +69,6 @@ class SongController @Inject() (cache: SyncCacheApi, controllerComponents: Contr
         val file = new File(filePath)
         log.info(s"file: ${filePath} size: ${file.getTotalSpace}")
         log.info(cacheKey + " Cache Miss, cache Song: " + filePath)
-        val ds = new DocumentService()
         val documentKey = s"source/${artistId}/${songName}"
         val byteArray = ds.getObject(documentKey)
 

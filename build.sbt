@@ -1,9 +1,18 @@
-name := """musicServer"""
+name := "musicServer"
 organization := "tsumura"
 
 version := "1.0-SNAPSHOT"
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+//Testing out Dependency Inversion Principle using sbt and guice.
+//idea is that the root web app knows nothing about the implementation of how music is persisted.
+//it just depends on the IStorage interface.
+//The trick is that it does need to depend on a tiny storageAssembler to bootstrap the persistence implmentation at runtime.
+//Unfortunately I had to put all the runtime dependency logic in the root sbt file because of the way the build.sbt are merged into a logical build file.
+//TODO: Maybe figure this sbt mess out later.
+lazy val IStorage = (project in file("./IStorage"))
+lazy val musicStorage = (project in file("musicStorage")).aggregate(IStorage).dependsOn(IStorage)
+lazy val storageAssembler = (project in file("storageAssembler")).aggregate(IStorage, musicStorage).dependsOn(IStorage, musicStorage)
+lazy val root = (project in file(".")).enablePlugins(PlayScala).aggregate(IStorage, storageAssembler).dependsOn(IStorage, storageAssembler)
 
 scalaVersion := "2.12.3"
 
@@ -22,15 +31,12 @@ libraryDependencies ++= Seq(
   "mysql" % "mysql-connector-java" % "8.0.19"
 )
 
-//aws java sdk
+//kafka producer
 libraryDependencies ++= Seq(
-  "com.amazonaws" % "aws-java-sdk" % "1.11.815"
+  "org.apache.kafka" % "kafka-clients" % "2.6.0"
 )
 
-
-
-// Adds additional packages into Twirl
-//TwirlKeys.templateImports += "tsumura.controllers._"
-
-// Adds additional packages into conf/routes
-// play.sbt.routes.RoutesKeys.routesImport += "tsumura.binders._"
+//kafka streams
+libraryDependencies ++= Seq(
+  "org.apache.kafka" % "kafka-streams" % "2.6.0",
+)
