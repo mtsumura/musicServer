@@ -18,6 +18,8 @@ class UsersController @Inject() (val controllerComponents: ControllerComponents,
 
   final val log = LoggerFactory.getLogger(this.getClass());
   implicit val userWrites = Json.writes[UserJson]
+  
+  private val userService = new UserService(db)
   /**
    * Create an Action to render an HTML page.
    *
@@ -27,19 +29,18 @@ class UsersController @Inject() (val controllerComponents: ControllerComponents,
    */
   def list(): Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
     log.info("UsersController list")
-    val u = new UserService(db)
-    val users = u.getUsers()
+    
+    val users = userService.getUsers()
     val usersJson: Array[UserJson] = users.map(user => UserJson(user.id, user.name, None))
     val jsonPayLoad = Json.toJson(usersJson)
-    log.info("UsersConroller list payload;" + jsonPayLoad.toString())
+    log.info("UsersConroller list payload:" + jsonPayLoad.toString())
     Ok(jsonPayLoad)
   }
 
   def getUser(id: Int): Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
-    val u = new UserService(db)
-    val user = u.getUser(id)
+    val user = userService.getUser(id)
     val jsonPayLoad = Json.toJson(UserJson(user.id, user.name, None))
-    log.info("UsersConroller getUser payload;" + jsonPayLoad.toString())
+    log.info("UsersConroller getUser payload:" + jsonPayLoad.toString())
 
     Ok(jsonPayLoad)
   }

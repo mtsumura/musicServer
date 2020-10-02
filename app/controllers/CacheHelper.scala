@@ -14,7 +14,7 @@ class CacheHelper @Inject() (cache: SyncCacheApi, val controllerComponents: Cont
   final val USE_CACHE = true
   final val log = LoggerFactory.getLogger(this.getClass());
 
-  protected def getSongs(key: String): Option[JsValue] = {
+  protected def getJsonObjectFromCache(key: String): Option[JsValue] = {
     try {
       if (this.USE_CACHE) cache.get[JsValue](key) else None
     } catch {
@@ -25,11 +25,11 @@ class CacheHelper @Inject() (cache: SyncCacheApi, val controllerComponents: Cont
     }
   }
 
-  protected def setSongs(key: String, jsonSongList: JsValue) = {
+  protected def setJsonObjectToCache(key: String, jsonSongList: JsValue) = {
     if (USE_CACHE) cache.set(key, jsonSongList)
   }
 
-  protected def getSongBinary(songId: String): Option[Array[Byte]] = {
+  protected def getBinaryFromCache(songId: String): Option[Array[Byte]] = {
     val cacheKey = songId
     val maybeSong: Option[Array[Byte]] = try {
       if (USE_CACHE) {
@@ -47,7 +47,7 @@ class CacheHelper @Inject() (cache: SyncCacheApi, val controllerComponents: Cont
     maybeSong
   }
 
-  protected def setSongBinary(songId: String, byteArray: Array[Byte]) = {
+  protected def setBinaryToCache(songId: String, byteArray: Array[Byte]) = {
     if (USE_CACHE) cache.set(songId, byteArray)
   }
 }

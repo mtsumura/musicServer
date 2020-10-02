@@ -26,6 +26,7 @@ class DocumentService extends DocumentServiceRetrieval {
   }
 
   def getObject(key: String): Array[Byte] = {
+    log.info("key:" + key)
     val getObjectRequest = new GetObjectRequest(bucketName, key)
     val s3ObjOpt =
       try {

@@ -26,6 +26,8 @@ class SongListController @Inject() (cache: SyncCacheApi, controllerComponents: C
   implicit val songWrites = Json.writes[SongJson]
   implicit val songListWrites = Json.writes[SongListJson]
 
+  private val songService = new SongService(db)
+  private val songListService = new SongListService(db)
   private final val SONG_KEY = "SONGS_V2"
 
   /**
@@ -37,13 +39,12 @@ class SongListController @Inject() (cache: SyncCacheApi, controllerComponents: C
    */
   def list(): Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
     val testId = -1
-    val songList = getSongs(SONG_KEY + testId) match {
+    val songList = getJsonObjectFromCache(SONG_KEY + testId) match {
       case Some(cachedSongList) =>
         log.info("cache Hit, reUse songList!")
         cachedSongList
       case None =>
         log.info("populate songList")
-        val songService = new SongService(db)
         val songList = songService.getSongs()
         convertAndCacheSongs(songList, testId)
     }
@@ -51,7 +52,7 @@ class SongListController @Inject() (cache: SyncCacheApi, controllerComponents: C
   }
 
   def listSongsBySongList(id: Int): Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
-    val songList = getSongs(SONG_KEY + id) match {
+    val songList = getJsonObjectFromCache(SONG_KEY + id) match {
       case Some(cachedSongList) =>
         log.info("cache Hit, reUse songList!")
         cachedSongList
@@ -66,8 +67,7 @@ class SongListController @Inject() (cache: SyncCacheApi, controllerComponents: C
   }
 
   def index(): Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
-    val songService = new SongListService(db)
-    val lists = songService.getLists()
+    val lists = songListService.getLists()
     val jsonLists = lists.map(l => SongListJson(l.id, l.name, l.url))
     Ok(Json.toJson(jsonLists))
   }
@@ -75,7 +75,7 @@ class SongListController @Inject() (cache: SyncCacheApi, controllerComponents: C
   private def convertAndCacheSongs(songList: Array[Song], id: Int): JsValue = {
     val songListModel = songList.map(s => SongJson(s.id, s.artist, s.songTitle, s.url))
     val jsonSongs = Json.toJson(songListModel)
-    setSongs(SONG_KEY + id, jsonSongs)
+    setJsonObjectToCache(SONG_KEY + id, jsonSongs)
     jsonSongs
   }
 }

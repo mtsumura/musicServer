@@ -1,27 +1,24 @@
 package controllers
 
+import org.slf4j.LoggerFactory
+
 import javax.inject.Inject
 import javax.inject.Singleton
-import play.api.mvc.BaseController
-import services.users.UserService
-import play.api.db.Database
-import org.slf4j.LoggerFactory
-import play.api.mvc.Request
-import play.api.mvc.AnyContent
 import play.api.mvc.Action
-import play.api.libs.json.Json
+import play.api.mvc.AnyContent
+import play.api.mvc.BaseController
 import play.api.mvc.ControllerComponents
-import models.UserJson
-import models.Event
+import play.api.mvc.Request
 import services.message.MessageService
 import services.message.SendMessage
 
 @Singleton
 class EventController @Inject() (val controllerComponents: ControllerComponents) extends BaseController {
 
-  implicit val eventWrites = Json.reads[Event]
-  
   final val log = LoggerFactory.getLogger(this.getClass());
+  
+  private val msgService: SendMessage = new MessageService()
+  private final val recordEvent = false
   /**
    * Create an Action to render an HTML page.
    *
@@ -31,14 +28,14 @@ class EventController @Inject() (val controllerComponents: ControllerComponents)
    */
   def record: Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
     val json = request.body.asJson.get
-    log.info("EventController event:" + json)
-    val event = json.as[Event]
-    println(event)
-        
-    val msgService: SendMessage = new MessageService()
-    msgService.addMessageToTopic(json.toString())
-    
-    log.info("EventConroller event end")
-    Ok("")
+    if(recordEvent) {
+      log.info("EventController event:" + json)
+      msgService.addMessageToTopic(json.toString())
+      Ok("event added")
+    }
+    else {
+      log.warn("EventController event ignored:" + json)
+      Ok("event ignored")
+    }
   }
 }

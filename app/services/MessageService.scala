@@ -40,7 +40,7 @@ class MessageService extends SendMessage with ConsumeMessage{
       val f = producer.send(record);
     }
     catch {
-      case e => log.error(e.toString())
+      case e: Exception => log.error(e.toString())
     }
     finally {
       producer.close();  
